@@ -1,0 +1,1815 @@
+openapi: 3.1.0
+info:
+  title: HubRise API
+  version: '2026-10-20'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-20: 44 operation(s) read from 3 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; HubRise has published no machine-readable contract that the pipeline
+    could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 0
+    documentation: 44
+    pages-with-code: 0
+    pages-read: 3
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-20'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://www.hubrise.com/developers/api
+  - https://www.hubrise.com/developers/api/orders
+  - https://www.hubrise.com/developers/api/catalogs
+servers:
+- url: https://api.hubrise.com
+paths:
+  /account/catalogs:
+    get:
+      operationId: get_account_catalogs
+      tags:
+      - Account
+      summary: List Catalogs
+      x-source: https://www.hubrise.com/developers/api/catalogs
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAccountCatalogsResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_account_catalogs
+      tags:
+      - Account
+      summary: Create Catalog
+      x-source: https://www.hubrise.com/developers/api/catalogs
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostAccountCatalogsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostAccountCatalogsResponse'
+      x-evidence:
+        kind: documentation
+  /account/orders:
+    get:
+      operationId: get_account_orders
+      tags:
+      - Account
+      summary: List Orders
+      x-source: https://www.hubrise.com/developers/api/orders
+      parameters:
+      - name: private_ref
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: status
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: created_by
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: after
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: before
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: customer_id
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAccountOrdersResponse'
+      x-evidence:
+        kind: documentation
+  /accounts/{accountId}/catalogs:
+    get:
+      operationId: get_accounts_accountId_catalogs
+      tags:
+      - Accounts
+      summary: List Catalogs
+      x-source: https://www.hubrise.com/developers/api/catalogs
+      parameters:
+      - name: accountId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAccountsAccountidCatalogsResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_accounts_accountId_catalogs
+      tags:
+      - Accounts
+      summary: Create Catalog
+      x-source: https://www.hubrise.com/developers/api/catalogs
+      parameters:
+      - name: accountId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostAccountsAccountidCatalogsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostAccountsAccountidCatalogsResponse'
+      x-evidence:
+        kind: documentation
+  /accounts/{accountId}/orders:
+    get:
+      operationId: get_accounts_accountId_orders
+      tags:
+      - Accounts
+      summary: List Orders
+      x-source: https://www.hubrise.com/developers/api/orders
+      parameters:
+      - name: accountId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: private_ref
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: status
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: created_by
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: after
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: before
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: customer_id
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAccountsAccountidOrdersResponse'
+      x-evidence:
+        kind: documentation
+  /catalogs:
+    post:
+      operationId: post_catalogs
+      tags:
+      - Catalogs
+      summary: Create an empty catalog.
+      x-source: https://www.hubrise.com/developers/api/catalogs
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /catalogs/{catalogId}/categories:
+    get:
+      operationId: get_catalogs_catalogId_categories
+      tags:
+      - Catalogs
+      summary: List Categories
+      x-source: https://www.hubrise.com/developers/api/catalogs
+      parameters:
+      - name: catalogId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCatalogsCatalogidCategoriesResponse'
+      x-evidence:
+        kind: documentation
+  /catalogs/{catalogId}/categories/{id}:
+    get:
+      operationId: get_catalogs_catalogId_categories_id
+      tags:
+      - Catalogs
+      summary: Retrieve Category
+      x-source: https://www.hubrise.com/developers/api/catalogs
+      parameters:
+      - name: catalogId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCatalogsCatalogidCategoriesIdResponse'
+      x-evidence:
+        kind: documentation
+  /catalogs/{catalogId}/charges:
+    get:
+      operationId: get_catalogs_catalogId_charges
+      tags:
+      - Catalogs
+      summary: List Charges
+      x-source: https://www.hubrise.com/developers/api/catalogs
+      parameters:
+      - name: catalogId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCatalogsCatalogidChargesResponse'
+      x-evidence:
+        kind: documentation
+  /catalogs/{catalogId}/charges/{id}:
+    get:
+      operationId: get_catalogs_catalogId_charges_id
+      tags:
+      - Catalogs
+      summary: Retrieve Charge
+      x-source: https://www.hubrise.com/developers/api/catalogs
+      parameters:
+      - name: catalogId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCatalogsCatalogidChargesIdResponse'
+      x-evidence:
+        kind: documentation
+  /catalogs/{catalogId}/deals:
+    get:
+      operationId: get_catalogs_catalogId_deals
+      tags:
+      - Catalogs
+      summary: List Deals
+      x-source: https://www.hubrise.com/developers/api/catalogs
+      parameters:
+      - name: catalogId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCatalogsCatalogidDealsResponse'
+      x-evidence:
+        kind: documentation
+  /catalogs/{catalogId}/deals/{id}:
+    get:
+      operationId: get_catalogs_catalogId_deals_id
+      tags:
+      - Catalogs
+      summary: Retrieve Deal
+      x-source: https://www.hubrise.com/developers/api/catalogs
+      parameters:
+      - name: catalogId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCatalogsCatalogidDealsIdResponse'
+      x-evidence:
+        kind: documentation
+  /catalogs/{catalogId}/discounts:
+    get:
+      operationId: get_catalogs_catalogId_discounts
+      tags:
+      - Catalogs
+      summary: List Discounts
+      x-source: https://www.hubrise.com/developers/api/catalogs
+      parameters:
+      - name: catalogId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCatalogsCatalogidDiscountsResponse'
+      x-evidence:
+        kind: documentation
+  /catalogs/{catalogId}/discounts/{id}:
+    get:
+      operationId: get_catalogs_catalogId_discounts_id
+      tags:
+      - Catalogs
+      summary: Retrieve Discount
+      x-source: https://www.hubrise.com/developers/api/catalogs
+      parameters:
+      - name: catalogId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCatalogsCatalogidDiscountsIdResponse'
+      x-evidence:
+        kind: documentation
+  /catalogs/{catalogId}/images:
+    get:
+      operationId: get_catalogs_catalogId_images
+      tags:
+      - Catalogs
+      summary: Retrieve the list of images in the catalog.
+      x-source: https://www.hubrise.com/developers/api/catalogs
+      parameters:
+      - name: catalogId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: private_ref
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Return only the image that matches this private_ref for the current client.
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCatalogsCatalogidImagesResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_catalogs_catalogId_images
+      tags:
+      - Catalogs
+      summary: Upload an image to a catalog.
+      x-source: https://www.hubrise.com/developers/api/catalogs
+      parameters:
+      - name: catalogId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: private_ref
+        in: query
+        required: false
+        schema:
+          type: string
+        description: A client‑side reference used to identify already uploaded images.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostCatalogsCatalogidImagesRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostCatalogsCatalogidImagesResponse'
+      x-evidence:
+        kind: documentation
+  /catalogs/{catalogId}/images/{id}/data:
+    get:
+      operationId: get_catalogs_catalogId_images_id_data
+      tags:
+      - Catalogs
+      summary: Return the raw image data.
+      x-source: https://www.hubrise.com/developers/api/catalogs
+      parameters:
+      - name: catalogId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCatalogsCatalogidImagesIdDataResponse'
+      x-evidence:
+        kind: documentation
+  /catalogs/{catalogId}/option_lists:
+    get:
+      operationId: get_catalogs_catalogId_option_lists
+      tags:
+      - Catalogs
+      summary: List Option Lists
+      x-source: https://www.hubrise.com/developers/api/catalogs
+      parameters:
+      - name: catalogId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCatalogsCatalogidOptionListsResponse'
+      x-evidence:
+        kind: documentation
+  /catalogs/{catalogId}/option_lists/{id}:
+    get:
+      operationId: get_catalogs_catalogId_option_lists_id
+      tags:
+      - Catalogs
+      summary: Retrieve Option List
+      x-source: https://www.hubrise.com/developers/api/catalogs
+      parameters:
+      - name: catalogId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCatalogsCatalogidOptionListsIdResponse'
+      x-evidence:
+        kind: documentation
+  /catalogs/{catalogId}/option_lists/{optionListId}/options:
+    get:
+      operationId: get_catalogs_catalogId_option_lists_optionListId_options
+      tags:
+      - Catalogs
+      summary: List Options
+      x-source: https://www.hubrise.com/developers/api/catalogs
+      parameters:
+      - name: catalogId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: optionListId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCatalogsCatalogidOptionListsOptionlistidOptionsResponse'
+      x-evidence:
+        kind: documentation
+  /catalogs/{catalogId}/option_lists/{optionListId}/options/{id}:
+    get:
+      operationId: get_catalogs_catalogId_option_lists_optionListId_options_id
+      tags:
+      - Catalogs
+      summary: Retrieve Option
+      x-source: https://www.hubrise.com/developers/api/catalogs
+      parameters:
+      - name: catalogId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: optionListId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCatalogsCatalogidOptionListsOptionlistidOptionsIdResponse'
+      x-evidence:
+        kind: documentation
+  /catalogs/{catalogId}/products:
+    get:
+      operationId: get_catalogs_catalogId_products
+      tags:
+      - Catalogs
+      summary: List Products
+      x-source: https://www.hubrise.com/developers/api/catalogs
+      parameters:
+      - name: catalogId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCatalogsCatalogidProductsResponse'
+      x-evidence:
+        kind: documentation
+  /catalogs/{catalogId}/products/{id}:
+    get:
+      operationId: get_catalogs_catalogId_products_id
+      tags:
+      - Catalogs
+      summary: Retrieve Product
+      x-source: https://www.hubrise.com/developers/api/catalogs
+      parameters:
+      - name: catalogId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCatalogsCatalogidProductsIdResponse'
+      x-evidence:
+        kind: documentation
+  /catalogs/{catalogId}/products/{productId}/skus:
+    get:
+      operationId: get_catalogs_catalogId_products_productId_skus
+      tags:
+      - Catalogs
+      summary: List Skus
+      x-source: https://www.hubrise.com/developers/api/catalogs
+      parameters:
+      - name: catalogId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: productId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCatalogsCatalogidProductsProductidSkusResponse'
+      x-evidence:
+        kind: documentation
+  /catalogs/{catalogId}/products/{productId}/skus/{id}:
+    get:
+      operationId: get_catalogs_catalogId_products_productId_skus_id
+      tags:
+      - Catalogs
+      summary: Retrieve Sku
+      x-source: https://www.hubrise.com/developers/api/catalogs
+      parameters:
+      - name: catalogId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: productId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCatalogsCatalogidProductsProductidSkusIdResponse'
+      x-evidence:
+        kind: documentation
+  /catalogs/{id}:
+    delete:
+      operationId: delete_catalogs_id
+      tags:
+      - Catalogs
+      summary: Delete Catalog
+      x-source: https://www.hubrise.com/developers/api/catalogs
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    get:
+      operationId: get_catalogs_id
+      tags:
+      - Catalogs
+      summary: Retrieve a specific catalog by its identifier.
+      x-source: https://www.hubrise.com/developers/api
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /customer_lists/{id}/customers:
+    get:
+      operationId: get_customer_lists_id_customers
+      tags:
+      - Customer Lists
+      summary: Retrieve customers belonging to a specific customer list.
+      x-source: https://www.hubrise.com/developers/api
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /location/catalogs:
+    get:
+      operationId: get_location_catalogs
+      tags:
+      - Location
+      summary: List Catalogs
+      x-source: https://www.hubrise.com/developers/api/catalogs
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetLocationCatalogsResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_location_catalogs
+      tags:
+      - Location
+      summary: Create Catalog
+      x-source: https://www.hubrise.com/developers/api/catalogs
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostLocationCatalogsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostLocationCatalogsResponse'
+      x-evidence:
+        kind: documentation
+  /location/orders:
+    get:
+      operationId: get_location_orders
+      tags:
+      - Location
+      summary: Retrieve a list of orders for the location.
+      x-source: https://www.hubrise.com/developers/api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_location_orders
+      tags:
+      - Location
+      summary: Create Order
+      x-source: https://www.hubrise.com/developers/api/orders
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostLocationOrdersRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostLocationOrdersResponse'
+      x-evidence:
+        kind: documentation
+  /location/orders/{orderId}:
+    get:
+      operationId: get_location_orders_orderId
+      tags:
+      - Location
+      summary: Retrieve Order
+      x-source: https://www.hubrise.com/developers/api/orders
+      parameters:
+      - name: orderId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetLocationOrdersOrderidResponse'
+      x-evidence:
+        kind: documentation
+    patch:
+      operationId: patch_location_orders_orderId
+      tags:
+      - Location
+      summary: Update Order
+      x-source: https://www.hubrise.com/developers/api/orders
+      parameters:
+      - name: orderId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchLocationOrdersOrderidRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatchLocationOrdersOrderidResponse'
+      x-evidence:
+        kind: documentation
+  /location/orders/sd89mm:
+    post:
+      operationId: post_location_orders_sd89mm
+      tags:
+      - Location
+      summary: Create or update an order using method override.
+      x-source: https://www.hubrise.com/developers/api
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /locations/{locationId}/catalogs:
+    get:
+      operationId: get_locations_locationId_catalogs
+      tags:
+      - Locations
+      summary: List Catalogs
+      x-source: https://www.hubrise.com/developers/api/catalogs
+      parameters:
+      - name: locationId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetLocationsLocationidCatalogsResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_locations_locationId_catalogs
+      tags:
+      - Locations
+      summary: Create Catalog
+      x-source: https://www.hubrise.com/developers/api/catalogs
+      parameters:
+      - name: locationId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostLocationsLocationidCatalogsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostLocationsLocationidCatalogsResponse'
+      x-evidence:
+        kind: documentation
+  /locations/{locationId}/orders:
+    get:
+      operationId: get_locations_locationId_orders
+      tags:
+      - Locations
+      summary: List Orders
+      x-source: https://www.hubrise.com/developers/api/orders
+      parameters:
+      - name: locationId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: private_ref
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: status
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: created_by
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: after
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: before
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: customer_id
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetLocationsLocationidOrdersResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_locations_locationId_orders
+      tags:
+      - Locations
+      summary: Create Order
+      x-source: https://www.hubrise.com/developers/api/orders
+      parameters:
+      - name: locationId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostLocationsLocationidOrdersRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostLocationsLocationidOrdersResponse'
+      x-evidence:
+        kind: documentation
+  /locations/{locationId}/orders/{orderId}:
+    get:
+      operationId: get_locations_locationId_orders_orderId
+      tags:
+      - Locations
+      summary: Retrieve Order
+      x-source: https://www.hubrise.com/developers/api/orders
+      parameters:
+      - name: locationId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: orderId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetLocationsLocationidOrdersOrderidResponse'
+      x-evidence:
+        kind: documentation
+    patch:
+      operationId: patch_locations_locationId_orders_orderId
+      tags:
+      - Locations
+      summary: Update Order
+      x-source: https://www.hubrise.com/developers/api/orders
+      parameters:
+      - name: locationId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: orderId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchLocationsLocationidOrdersOrderidRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatchLocationsLocationidOrdersOrderidResponse'
+      x-evidence:
+        kind: documentation
+  /orders:
+    get:
+      operationId: get_orders
+      tags:
+      - Orders
+      summary: Retrieve a list of orders.
+      x-source: https://www.hubrise.com/developers/api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1/location/orders:
+    get:
+      operationId: get_v1_location_orders
+      tags:
+      - Location
+      summary: Retrieve a list of orders (full versioned path).
+      x-source: https://www.hubrise.com/developers/api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    GetAccountCatalogsResponse:
+      type: object
+      properties:
+        '[]':
+          type: array
+          description: Array of catalog summaries
+    PostAccountCatalogsRequest:
+      type: object
+      properties:
+        name:
+          type: string
+        data:
+          type: object
+      required:
+      - name
+    PostAccountCatalogsResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        created_at:
+          type: string
+    GetAccountOrdersResponse:
+      type: object
+      properties:
+        orders:
+          type: array
+          description: list of order objects
+    GetAccountsAccountidCatalogsResponse:
+      type: object
+      properties:
+        '[]':
+          type: array
+          description: Array of catalog summaries
+    PostAccountsAccountidCatalogsRequest:
+      type: object
+      properties:
+        name:
+          type: string
+        data:
+          type: object
+      required:
+      - name
+    PostAccountsAccountidCatalogsResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        created_at:
+          type: string
+    GetAccountsAccountidOrdersResponse:
+      type: object
+      properties:
+        orders:
+          type: array
+          description: list of order objects
+    GetCatalogsCatalogidCategoriesResponse:
+      type: object
+      properties:
+        categories:
+          type: array
+          description: Array of category objects
+    GetCatalogsCatalogidCategoriesIdResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Category id
+        ref:
+          type: string
+          description: Category ref
+        parent_id:
+          type: string
+          description: Parent category id or null
+        name:
+          type: string
+          description: Category name
+        description:
+          type: string
+          description: Category description
+        tags:
+          type: array
+          description: List of tags
+    GetCatalogsCatalogidChargesResponse:
+      type: object
+      properties:
+        charges:
+          type: array
+          description: Array of charge objects.
+    GetCatalogsCatalogidChargesIdResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        ref:
+          type: string
+        name:
+          type: string
+        type:
+          type: string
+        price:
+          type: string
+    GetCatalogsCatalogidDealsResponse:
+      type: object
+      properties:
+        deals:
+          type: array
+          description: Array of deal objects.
+    GetCatalogsCatalogidDealsIdResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Deal identifier.
+        ref:
+          type: string
+          description: Deal reference.
+        name:
+          type: string
+          description: Deal name.
+        description:
+          type: string
+          description: Deal description.
+        lines:
+          type: array
+          description: Deal lines with sku information and pricing effect.
+    GetCatalogsCatalogidDiscountsResponse:
+      type: object
+      properties:
+        discounts:
+          type: array
+          description: Array of discount objects.
+    GetCatalogsCatalogidDiscountsIdResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        ref:
+          type: string
+        name:
+          type: string
+        restrictions:
+          type: object
+        pricing_effect:
+          type: string
+        pricing_value:
+          type: string
+    GetCatalogsCatalogidImagesResponse:
+      type: object
+      properties:
+        images:
+          type: array
+          description: Array of image objects with fields id, type, size, md5, private_ref, seconds_before_removal.
+    PostCatalogsCatalogidImagesRequest:
+      type: object
+      properties:
+        image binary:
+          type: string
+          description: Image data in JPEG, PNG, WEBP, GIF or BMP format, max 1 MB.
+      required:
+      - image binary
+    PostCatalogsCatalogidImagesResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        type:
+          type: string
+        size:
+          type: integer
+        md5:
+          type: string
+        private_ref:
+          type: string
+        seconds_before_removal:
+          type: integer
+    GetCatalogsCatalogidImagesIdDataResponse:
+      type: object
+      properties:
+        binary_image:
+          type: string
+          description: Raw image data with appropriate Content‑Type header.
+    GetCatalogsCatalogidOptionListsResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Option list id.
+        ref:
+          type: string
+          description: Option list ref.
+        name:
+          type: string
+          description: Option list name.
+    GetCatalogsCatalogidOptionListsIdResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: The id of the option list.
+        ref:
+          type: string
+          description: The ref of the option list.
+        name:
+          type: string
+          description: The name of the option list.
+        min_selections:
+          type: number
+          description: Minimum selections.
+        max_selections:
+          type: number
+          description: Maximum selections.
+        multiple_selection:
+          type: boolean
+          description: Multiple selection flag.
+        type:
+          type: string
+          description: Deprecated type field.
+        options:
+          type: array
+          description: List of options.
+    GetCatalogsCatalogidOptionListsOptionlistidOptionsResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Option id.
+        ref:
+          type: string
+          description: Option ref.
+        option_list_id:
+          type: string
+          description: Parent option list id.
+        name:
+          type: string
+          description: Option name.
+        price:
+          type: string
+          description: Option price.
+    GetCatalogsCatalogidOptionListsOptionlistidOptionsIdResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Option id.
+        ref:
+          type: string
+          description: Option ref.
+        option_list_id:
+          type: string
+          description: Parent option list id.
+        name:
+          type: string
+          description: Option name.
+        price:
+          type: string
+          description: Option price.
+        price_overrides:
+          type: array
+          description: Price overrides.
+        default:
+          type: boolean
+          description: Default selection flag.
+        tags:
+          type: array
+          description: Option tags.
+        nutrition:
+          type: object
+          description: Nutrition info.
+        weight:
+          type: string
+          description: Option weight.
+        volume:
+          type: string
+          description: Option volume.
+    GetCatalogsCatalogidProductsResponse:
+      type: object
+      properties:
+        products:
+          type: array
+          description: Array of product objects
+    GetCatalogsCatalogidProductsIdResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Product id
+        ref:
+          type: string
+          description: Product ref
+        category_id:
+          type: string
+          description: Parent category id
+        name:
+          type: string
+          description: Product name
+        description:
+          type: string
+          description: Product description
+        tags:
+          type: array
+          description: List of tags
+        nutrition:
+          type: object
+          description: Nutritional information
+        tax_rate:
+          type: object
+          description: Tax rates
+        images_ids:
+          type: array
+          description: Image ids
+        skus:
+          type: array
+          description: Array of SKU objects
+    GetCatalogsCatalogidProductsProductidSkusResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Sku id.
+        ref:
+          type: string
+          description: Sku ref.
+        name:
+          type: string
+          description: Sku name.
+    GetCatalogsCatalogidProductsProductidSkusIdResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: The id of the sku.
+        ref:
+          type: string
+          description: The ref of the sku.
+        name:
+          type: string
+          description: The name of the sku.
+        product_id:
+          type: string
+          description: The id of the sku's parent product.
+        restrictions:
+          type: object
+          description: Restrictions for the sku.
+        price:
+          type: string
+          description: Price of the sku.
+        price_overrides:
+          type: array
+          description: Price overrides.
+        option_list_ids:
+          type: array
+          description: Ids of option lists attached to the sku.
+        tags:
+          type: array
+          description: Tags of the sku.
+        custom_fields:
+          type: object
+          description: Custom fields.
+        weight:
+          type: string
+          description: Weight of the sku.
+        volume:
+          type: string
+          description: Volume of the sku.
+        nb_servings:
+          type: integer
+          description: Number of servings.
+    GetLocationCatalogsResponse:
+      type: object
+      properties:
+        '[]':
+          type: array
+          description: Array of catalog summaries
+    PostLocationCatalogsRequest:
+      type: object
+      properties:
+        name:
+          type: string
+        data:
+          type: object
+      required:
+      - name
+    PostLocationCatalogsResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        created_at:
+          type: string
+    PostLocationOrdersRequest:
+      type: object
+      properties:
+        channel:
+          type: string
+        ref:
+          type: string
+        private_ref:
+          type: string
+        status:
+          type: string
+        service_type:
+          type: string
+        service_type_ref:
+          type: string
+        expected_time:
+          type: string
+        expected_time_pickup:
+          type: boolean
+        asap:
+          type: boolean
+        confirmed_time:
+          type: string
+        driver_pickup_url:
+          type: string
+        customer_notes:
+          type: string
+        seller_notes:
+          type: string
+        collection_code:
+          type: string
+        coupon_codes:
+          type: string
+        items:
+          type: string
+        deals:
+          type: string
+        discounts:
+          type: string
+        charges:
+          type: string
+        payments:
+          type: string
+        customer_id:
+          type: string
+        customer_list_id:
+          type: string
+        customer_private_ref:
+          type: string
+        customer:
+          type: string
+        loyalty_operations:
+          type: string
+        custom_fields:
+          type: string
+      required:
+      - status
+    PostLocationOrdersResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        location_id:
+          type: string
+        status:
+          type: string
+        total:
+          type: string
+    GetLocationOrdersOrderidResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        location_id:
+          type: string
+        ref:
+          type: string
+        status:
+          type: string
+        total:
+          type: string
+    PatchLocationOrdersOrderidRequest:
+      type: object
+      properties:
+        status:
+          type: string
+        confirmed_time:
+          type: string
+        driver_pickup_url:
+          type: string
+        seller_notes:
+          type: string
+        collection_code:
+          type: string
+        private_ref:
+          type: string
+        custom_fields:
+          type: string
+        items:
+          type: string
+        discounts:
+          type: string
+        charges:
+          type: string
+        payments:
+          type: string
+    PatchLocationOrdersOrderidResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        status:
+          type: string
+    GetLocationsLocationidCatalogsResponse:
+      type: object
+      properties:
+        '[]':
+          type: array
+          description: Array of catalog summaries
+    PostLocationsLocationidCatalogsRequest:
+      type: object
+      properties:
+        name:
+          type: string
+          description: The name of the catalog.
+        data.variants:
+          type: array
+          description: List of variants.
+        data.categories:
+          type: array
+          description: List of categories.
+        data.products:
+          type: array
+          description: List of products.
+        data.option_lists:
+          type: array
+          description: List of option lists.
+        data.deals:
+          type: array
+          description: List of deals.
+        data.discounts:
+          type: array
+          description: List of discounts.
+        data.charges:
+          type: array
+          description: List of charges.
+      required:
+      - name
+    PostLocationsLocationidCatalogsResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        created_at:
+          type: string
+    GetLocationsLocationidOrdersResponse:
+      type: object
+      properties:
+        orders:
+          type: array
+          description: list of order objects
+    PostLocationsLocationidOrdersRequest:
+      type: object
+      properties:
+        channel:
+          type: string
+        ref:
+          type: string
+        private_ref:
+          type: string
+        status:
+          type: string
+        service_type:
+          type: string
+        service_type_ref:
+          type: string
+        expected_time:
+          type: string
+        expected_time_pickup:
+          type: boolean
+        asap:
+          type: boolean
+        confirmed_time:
+          type: string
+        driver_pickup_url:
+          type: string
+        customer_notes:
+          type: string
+        seller_notes:
+          type: string
+        collection_code:
+          type: string
+        coupon_codes:
+          type: string
+        items:
+          type: string
+        deals:
+          type: string
+        discounts:
+          type: string
+        charges:
+          type: string
+        payments:
+          type: string
+        customer_id:
+          type: string
+        customer_list_id:
+          type: string
+        customer_private_ref:
+          type: string
+        customer:
+          type: string
+        loyalty_operations:
+          type: string
+        custom_fields:
+          type: string
+      required:
+      - status
+    PostLocationsLocationidOrdersResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        location_id:
+          type: string
+        status:
+          type: string
+        total:
+          type: string
+    GetLocationsLocationidOrdersOrderidResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        location_id:
+          type: string
+        ref:
+          type: string
+        status:
+          type: string
+        total:
+          type: string
+        items:
+          type: string
+        discounts:
+          type: string
+        charges:
+          type: string
+        payments:
+          type: string
+        customer:
+          type: string
+        delivery:
+          type: string
+    PatchLocationsLocationidOrdersOrderidRequest:
+      type: object
+      properties:
+        status:
+          type: string
+        confirmed_time:
+          type: string
+        driver_pickup_url:
+          type: string
+        seller_notes:
+          type: string
+        collection_code:
+          type: string
+        private_ref:
+          type: string
+        custom_fields:
+          type: string
+        items:
+          type: string
+        discounts:
+          type: string
+        charges:
+          type: string
+        payments:
+          type: string
+    PatchLocationsLocationidOrdersOrderidResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        location_id:
+          type: string
+        status:
+          type: string
+        items:
+          type: string
+tags:
+- name: Account
+- name: Accounts
+- name: Catalogs
+- name: Customer Lists
+- name: Location
+- name: Locations
+- name: Orders

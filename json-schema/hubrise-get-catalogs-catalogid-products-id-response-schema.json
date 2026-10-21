@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/hubrise/main/json-schema/hubrise-get-catalogs-catalogid-products-id-response-schema.json",
+  "title": "GetCatalogsCatalogidProductsIdResponse",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/GetCatalogsCatalogidProductsIdResponse",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Product id"
+    },
+    "ref": {
+      "type": "string",
+      "description": "Product ref"
+    },
+    "category_id": {
+      "type": "string",
+      "description": "Parent category id"
+    },
+    "name": {
+      "type": "string",
+      "description": "Product name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Product description"
+    },
+    "tags": {
+      "type": "array",
+      "description": "List of tags"
+    },
+    "nutrition": {
+      "type": "object",
+      "description": "Nutritional information"
+    },
+    "tax_rate": {
+      "type": "object",
+      "description": "Tax rates"
+    },
+    "images_ids": {
+      "type": "array",
+      "description": "Image ids"
+    },
+    "skus": {
+      "type": "array",
+      "description": "Array of SKU objects"
+    }
+  }
+}

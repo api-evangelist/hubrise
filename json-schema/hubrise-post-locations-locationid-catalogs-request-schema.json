@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/hubrise/main/json-schema/hubrise-post-locations-locationid-catalogs-request-schema.json",
+  "title": "PostLocationsLocationidCatalogsRequest",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/PostLocationsLocationidCatalogsRequest",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the catalog."
+    },
+    "data.variants": {
+      "type": "array",
+      "description": "List of variants."
+    },
+    "data.categories": {
+      "type": "array",
+      "description": "List of categories."
+    },
+    "data.products": {
+      "type": "array",
+      "description": "List of products."
+    },
+    "data.option_lists": {
+      "type": "array",
+      "description": "List of option lists."
+    },
+    "data.deals": {
+      "type": "array",
+      "description": "List of deals."
+    },
+    "data.discounts": {
+      "type": "array",
+      "description": "List of discounts."
+    },
+    "data.charges": {
+      "type": "array",
+      "description": "List of charges."
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

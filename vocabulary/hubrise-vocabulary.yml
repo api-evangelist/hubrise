@@ -1,0 +1,280 @@
+generated: '2026-10-21'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/_ae-authored/hubrise-openapi-generated.yml
+vocabulary:
+  name: HubRise Domain Vocabulary
+  description: 'Terms declared by HubRise''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-21'
+  terms:
+  - term: GetAccountCatalogsResponse
+    definition: 'Object declared by the contract with fields: [].'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/GetAccountCatalogsResponse
+  - term: PostAccountCatalogsRequest
+    definition: 'Object declared by the contract with fields: name, data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/PostAccountCatalogsRequest
+  - term: PostAccountCatalogsResponse
+    definition: 'Object declared by the contract with fields: id, name, created_at.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/PostAccountCatalogsResponse
+  - term: GetAccountOrdersResponse
+    definition: 'Object declared by the contract with fields: orders.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/GetAccountOrdersResponse
+  - term: GetAccountsAccountidCatalogsResponse
+    definition: 'Object declared by the contract with fields: [].'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/GetAccountsAccountidCatalogsResponse
+  - term: PostAccountsAccountidCatalogsRequest
+    definition: 'Object declared by the contract with fields: name, data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/PostAccountsAccountidCatalogsRequest
+  - term: PostAccountsAccountidCatalogsResponse
+    definition: 'Object declared by the contract with fields: id, name, created_at.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/PostAccountsAccountidCatalogsResponse
+  - term: GetAccountsAccountidOrdersResponse
+    definition: 'Object declared by the contract with fields: orders.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/GetAccountsAccountidOrdersResponse
+  - term: GetCatalogsCatalogidCategoriesResponse
+    definition: 'Object declared by the contract with fields: categories.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/GetCatalogsCatalogidCategoriesResponse
+  - term: GetCatalogsCatalogidCategoriesIdResponse
+    definition: 'Object declared by the contract with fields: id, ref, parent_id, name, description, tags.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/GetCatalogsCatalogidCategoriesIdResponse
+  - term: GetCatalogsCatalogidChargesResponse
+    definition: 'Object declared by the contract with fields: charges.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/GetCatalogsCatalogidChargesResponse
+  - term: GetCatalogsCatalogidChargesIdResponse
+    definition: 'Object declared by the contract with fields: id, ref, name, type, price.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/GetCatalogsCatalogidChargesIdResponse
+  - term: GetCatalogsCatalogidDealsResponse
+    definition: 'Object declared by the contract with fields: deals.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/GetCatalogsCatalogidDealsResponse
+  - term: GetCatalogsCatalogidDealsIdResponse
+    definition: 'Object declared by the contract with fields: id, ref, name, description, lines.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/GetCatalogsCatalogidDealsIdResponse
+  - term: GetCatalogsCatalogidDiscountsResponse
+    definition: 'Object declared by the contract with fields: discounts.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/GetCatalogsCatalogidDiscountsResponse
+  - term: GetCatalogsCatalogidDiscountsIdResponse
+    definition: 'Object declared by the contract with fields: id, ref, name, restrictions, pricing_effect, pricing_value.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/GetCatalogsCatalogidDiscountsIdResponse
+  - term: GetCatalogsCatalogidImagesResponse
+    definition: 'Object declared by the contract with fields: images.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/GetCatalogsCatalogidImagesResponse
+  - term: PostCatalogsCatalogidImagesRequest
+    definition: 'Object declared by the contract with fields: image binary.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/PostCatalogsCatalogidImagesRequest
+  - term: PostCatalogsCatalogidImagesResponse
+    definition: 'Object declared by the contract with fields: id, type, size, md5, private_ref, seconds_before_removal.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/PostCatalogsCatalogidImagesResponse
+  - term: GetCatalogsCatalogidImagesIdDataResponse
+    definition: 'Object declared by the contract with fields: binary_image.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/GetCatalogsCatalogidImagesIdDataResponse
+  - term: GetCatalogsCatalogidOptionListsResponse
+    definition: 'Object declared by the contract with fields: id, ref, name.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/GetCatalogsCatalogidOptionListsResponse
+  - term: GetCatalogsCatalogidOptionListsIdResponse
+    definition: 'Object declared by the contract with fields: id, ref, name, min_selections, max_selections, multiple_selection, type, options.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/GetCatalogsCatalogidOptionListsIdResponse
+  - term: GetCatalogsCatalogidOptionListsOptionlistidOptionsResponse
+    definition: 'Object declared by the contract with fields: id, ref, option_list_id, name, price.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/GetCatalogsCatalogidOptionListsOptionlistidOptionsResponse
+  - term: GetCatalogsCatalogidOptionListsOptionlistidOptionsIdResponse
+    definition: 'Object declared by the contract with fields: id, ref, option_list_id, name, price, price_overrides, default, tags, nutrition,
+      weight, volume.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/GetCatalogsCatalogidOptionListsOptionlistidOptionsIdResponse
+  - term: GetCatalogsCatalogidProductsResponse
+    definition: 'Object declared by the contract with fields: products.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/GetCatalogsCatalogidProductsResponse
+  - term: GetCatalogsCatalogidProductsIdResponse
+    definition: 'Object declared by the contract with fields: id, ref, category_id, name, description, tags, nutrition, tax_rate, images_ids,
+      skus.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/GetCatalogsCatalogidProductsIdResponse
+  - term: GetCatalogsCatalogidProductsProductidSkusResponse
+    definition: 'Object declared by the contract with fields: id, ref, name.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/GetCatalogsCatalogidProductsProductidSkusResponse
+  - term: GetCatalogsCatalogidProductsProductidSkusIdResponse
+    definition: 'Object declared by the contract with fields: id, ref, name, product_id, restrictions, price, price_overrides, option_list_ids,
+      tags, custom_fields, weight, volume. (1 more)'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/GetCatalogsCatalogidProductsProductidSkusIdResponse
+  - term: GetLocationCatalogsResponse
+    definition: 'Object declared by the contract with fields: [].'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/GetLocationCatalogsResponse
+  - term: PostLocationCatalogsRequest
+    definition: 'Object declared by the contract with fields: name, data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/PostLocationCatalogsRequest
+  - term: PostLocationCatalogsResponse
+    definition: 'Object declared by the contract with fields: id, name, created_at.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/PostLocationCatalogsResponse
+  - term: PostLocationOrdersRequest
+    definition: 'Object declared by the contract with fields: channel, ref, private_ref, status, service_type, service_type_ref, expected_time,
+      expected_time_pickup, asap, confirmed_time, driver_pickup_url, customer_notes. (14 more)'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/PostLocationOrdersRequest
+  - term: PostLocationOrdersResponse
+    definition: 'Object declared by the contract with fields: id, location_id, status, total.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/PostLocationOrdersResponse
+  - term: GetLocationOrdersOrderidResponse
+    definition: 'Object declared by the contract with fields: id, location_id, ref, status, total.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/GetLocationOrdersOrderidResponse
+  - term: PatchLocationOrdersOrderidRequest
+    definition: 'Object declared by the contract with fields: status, confirmed_time, driver_pickup_url, seller_notes, collection_code, private_ref,
+      custom_fields, items, discounts, charges, payments.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/PatchLocationOrdersOrderidRequest
+  - term: PatchLocationOrdersOrderidResponse
+    definition: 'Object declared by the contract with fields: id, status.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/PatchLocationOrdersOrderidResponse
+  - term: GetLocationsLocationidCatalogsResponse
+    definition: 'Object declared by the contract with fields: [].'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/GetLocationsLocationidCatalogsResponse
+  - term: PostLocationsLocationidCatalogsRequest
+    definition: 'Object declared by the contract with fields: name, data.variants, data.categories, data.products, data.option_lists, data.deals,
+      data.discounts, data.charges.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/PostLocationsLocationidCatalogsRequest
+  - term: PostLocationsLocationidCatalogsResponse
+    definition: 'Object declared by the contract with fields: id, name, created_at.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/PostLocationsLocationidCatalogsResponse
+  - term: GetLocationsLocationidOrdersResponse
+    definition: 'Object declared by the contract with fields: orders.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/GetLocationsLocationidOrdersResponse
+  - term: PostLocationsLocationidOrdersRequest
+    definition: 'Object declared by the contract with fields: channel, ref, private_ref, status, service_type, service_type_ref, expected_time,
+      expected_time_pickup, asap, confirmed_time, driver_pickup_url, customer_notes. (14 more)'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/PostLocationsLocationidOrdersRequest
+  - term: PostLocationsLocationidOrdersResponse
+    definition: 'Object declared by the contract with fields: id, location_id, status, total.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/PostLocationsLocationidOrdersResponse
+  - term: GetLocationsLocationidOrdersOrderidResponse
+    definition: 'Object declared by the contract with fields: id, location_id, ref, status, total, items, discounts, charges, payments, customer,
+      delivery.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/GetLocationsLocationidOrdersOrderidResponse
+  - term: PatchLocationsLocationidOrdersOrderidRequest
+    definition: 'Object declared by the contract with fields: status, confirmed_time, driver_pickup_url, seller_notes, collection_code, private_ref,
+      custom_fields, items, discounts, charges, payments.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/PatchLocationsLocationidOrdersOrderidRequest
+  - term: PatchLocationsLocationidOrdersOrderidResponse
+    definition: 'Object declared by the contract with fields: id, location_id, status, items.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/PatchLocationsLocationidOrdersOrderidResponse
+  - term: Account
+    definition: 'Resource group in the contract; its operation GET /account/catalogs: List Catalogs'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml
+  - term: Accounts
+    definition: 'Resource group in the contract; its operation GET /accounts/{accountId}/catalogs: List Catalogs'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml
+  - term: Catalogs
+    definition: 'Resource group in the contract; its operation POST /catalogs: Create an empty catalog.'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml
+  - term: Customer Lists
+    definition: 'Resource group in the contract; its operation GET /customer_lists/{id}/customers: Retrieve customers belonging to a specific
+      customer list.'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml
+  - term: Location
+    definition: 'Resource group in the contract; its operation GET /location/catalogs: List Catalogs'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml
+  - term: Locations
+    definition: 'Resource group in the contract; its operation GET /locations/{locationId}/catalogs: List Catalogs'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml
+  - term: Orders
+    definition: 'Resource group in the contract; its operation GET /orders: Retrieve a list of orders.'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/hubrise-openapi-generated.yml

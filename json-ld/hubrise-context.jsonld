@@ -1,0 +1,352 @@
+{
+  "@context": {
+    "@vocab": "https://hubrise.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "hubrise": "https://hubrise.com/schema#",
+    "GetAccountCatalogsResponse": "hubrise:GetAccountCatalogsResponse",
+    "PostAccountCatalogsRequest": "hubrise:PostAccountCatalogsRequest",
+    "name": {
+      "@id": "hubrise:name",
+      "@type": "xsd:string"
+    },
+    "data": {
+      "@id": "hubrise:data"
+    },
+    "PostAccountCatalogsResponse": "hubrise:PostAccountCatalogsResponse",
+    "id": {
+      "@id": "hubrise:id",
+      "@type": "xsd:string"
+    },
+    "created_at": {
+      "@id": "hubrise:created_at",
+      "@type": "xsd:string"
+    },
+    "GetAccountOrdersResponse": "hubrise:GetAccountOrdersResponse",
+    "orders": {
+      "@id": "hubrise:orders",
+      "@container": "@list"
+    },
+    "GetAccountsAccountidCatalogsResponse": "hubrise:GetAccountsAccountidCatalogsResponse",
+    "PostAccountsAccountidCatalogsRequest": "hubrise:PostAccountsAccountidCatalogsRequest",
+    "PostAccountsAccountidCatalogsResponse": "hubrise:PostAccountsAccountidCatalogsResponse",
+    "GetAccountsAccountidOrdersResponse": "hubrise:GetAccountsAccountidOrdersResponse",
+    "GetCatalogsCatalogidCategoriesResponse": "hubrise:GetCatalogsCatalogidCategoriesResponse",
+    "categories": {
+      "@id": "hubrise:categories",
+      "@container": "@list"
+    },
+    "GetCatalogsCatalogidCategoriesIdResponse": "hubrise:GetCatalogsCatalogidCategoriesIdResponse",
+    "ref": {
+      "@id": "hubrise:ref",
+      "@type": "xsd:string"
+    },
+    "parent_id": {
+      "@id": "hubrise:parent_id",
+      "@type": "xsd:string"
+    },
+    "description": {
+      "@id": "hubrise:description",
+      "@type": "xsd:string"
+    },
+    "tags": {
+      "@id": "hubrise:tags",
+      "@container": "@list"
+    },
+    "GetCatalogsCatalogidChargesResponse": "hubrise:GetCatalogsCatalogidChargesResponse",
+    "charges": {
+      "@id": "hubrise:charges",
+      "@container": "@list"
+    },
+    "GetCatalogsCatalogidChargesIdResponse": "hubrise:GetCatalogsCatalogidChargesIdResponse",
+    "type": {
+      "@id": "hubrise:type",
+      "@type": "xsd:string"
+    },
+    "price": {
+      "@id": "hubrise:price",
+      "@type": "xsd:string"
+    },
+    "GetCatalogsCatalogidDealsResponse": "hubrise:GetCatalogsCatalogidDealsResponse",
+    "deals": {
+      "@id": "hubrise:deals",
+      "@container": "@list"
+    },
+    "GetCatalogsCatalogidDealsIdResponse": "hubrise:GetCatalogsCatalogidDealsIdResponse",
+    "lines": {
+      "@id": "hubrise:lines",
+      "@container": "@list"
+    },
+    "GetCatalogsCatalogidDiscountsResponse": "hubrise:GetCatalogsCatalogidDiscountsResponse",
+    "discounts": {
+      "@id": "hubrise:discounts",
+      "@container": "@list"
+    },
+    "GetCatalogsCatalogidDiscountsIdResponse": "hubrise:GetCatalogsCatalogidDiscountsIdResponse",
+    "restrictions": {
+      "@id": "hubrise:restrictions"
+    },
+    "pricing_effect": {
+      "@id": "hubrise:pricing_effect",
+      "@type": "xsd:string"
+    },
+    "pricing_value": {
+      "@id": "hubrise:pricing_value",
+      "@type": "xsd:string"
+    },
+    "GetCatalogsCatalogidImagesResponse": "hubrise:GetCatalogsCatalogidImagesResponse",
+    "images": {
+      "@id": "hubrise:images",
+      "@container": "@list"
+    },
+    "PostCatalogsCatalogidImagesRequest": "hubrise:PostCatalogsCatalogidImagesRequest",
+    "PostCatalogsCatalogidImagesResponse": "hubrise:PostCatalogsCatalogidImagesResponse",
+    "size": {
+      "@id": "hubrise:size",
+      "@type": "xsd:integer"
+    },
+    "md5": {
+      "@id": "hubrise:md5",
+      "@type": "xsd:string"
+    },
+    "private_ref": {
+      "@id": "hubrise:private_ref",
+      "@type": "xsd:string"
+    },
+    "seconds_before_removal": {
+      "@id": "hubrise:seconds_before_removal",
+      "@type": "xsd:integer"
+    },
+    "GetCatalogsCatalogidImagesIdDataResponse": "hubrise:GetCatalogsCatalogidImagesIdDataResponse",
+    "binary_image": {
+      "@id": "hubrise:binary_image",
+      "@type": "xsd:string"
+    },
+    "GetCatalogsCatalogidOptionListsResponse": "hubrise:GetCatalogsCatalogidOptionListsResponse",
+    "GetCatalogsCatalogidOptionListsIdResponse": "hubrise:GetCatalogsCatalogidOptionListsIdResponse",
+    "min_selections": {
+      "@id": "hubrise:min_selections",
+      "@type": "xsd:decimal"
+    },
+    "max_selections": {
+      "@id": "hubrise:max_selections",
+      "@type": "xsd:decimal"
+    },
+    "multiple_selection": {
+      "@id": "hubrise:multiple_selection",
+      "@type": "xsd:boolean"
+    },
+    "options": {
+      "@id": "hubrise:options",
+      "@container": "@list"
+    },
+    "GetCatalogsCatalogidOptionListsOptionlistidOptionsResponse": "hubrise:GetCatalogsCatalogidOptionListsOptionlistidOptionsResponse",
+    "option_list_id": {
+      "@id": "hubrise:option_list_id",
+      "@type": "xsd:string"
+    },
+    "GetCatalogsCatalogidOptionListsOptionlistidOptionsIdResponse": "hubrise:GetCatalogsCatalogidOptionListsOptionlistidOptionsIdResponse",
+    "price_overrides": {
+      "@id": "hubrise:price_overrides",
+      "@container": "@list"
+    },
+    "default": {
+      "@id": "hubrise:default",
+      "@type": "xsd:boolean"
+    },
+    "nutrition": {
+      "@id": "hubrise:nutrition"
+    },
+    "weight": {
+      "@id": "hubrise:weight",
+      "@type": "xsd:string"
+    },
+    "volume": {
+      "@id": "hubrise:volume",
+      "@type": "xsd:string"
+    },
+    "GetCatalogsCatalogidProductsResponse": "hubrise:GetCatalogsCatalogidProductsResponse",
+    "products": {
+      "@id": "hubrise:products",
+      "@container": "@list"
+    },
+    "GetCatalogsCatalogidProductsIdResponse": "hubrise:GetCatalogsCatalogidProductsIdResponse",
+    "category_id": {
+      "@id": "hubrise:category_id",
+      "@type": "xsd:string"
+    },
+    "tax_rate": {
+      "@id": "hubrise:tax_rate"
+    },
+    "images_ids": {
+      "@id": "hubrise:images_ids",
+      "@container": "@list"
+    },
+    "skus": {
+      "@id": "hubrise:skus",
+      "@container": "@list"
+    },
+    "GetCatalogsCatalogidProductsProductidSkusResponse": "hubrise:GetCatalogsCatalogidProductsProductidSkusResponse",
+    "GetCatalogsCatalogidProductsProductidSkusIdResponse": "hubrise:GetCatalogsCatalogidProductsProductidSkusIdResponse",
+    "product_id": {
+      "@id": "hubrise:product_id",
+      "@type": "xsd:string"
+    },
+    "option_list_ids": {
+      "@id": "hubrise:option_list_ids",
+      "@container": "@list"
+    },
+    "custom_fields": {
+      "@id": "hubrise:custom_fields"
+    },
+    "nb_servings": {
+      "@id": "hubrise:nb_servings",
+      "@type": "xsd:integer"
+    },
+    "GetLocationCatalogsResponse": "hubrise:GetLocationCatalogsResponse",
+    "PostLocationCatalogsRequest": "hubrise:PostLocationCatalogsRequest",
+    "PostLocationCatalogsResponse": "hubrise:PostLocationCatalogsResponse",
+    "PostLocationOrdersRequest": "hubrise:PostLocationOrdersRequest",
+    "channel": {
+      "@id": "hubrise:channel",
+      "@type": "xsd:string"
+    },
+    "status": {
+      "@id": "hubrise:status",
+      "@type": "xsd:string"
+    },
+    "service_type": {
+      "@id": "hubrise:service_type",
+      "@type": "xsd:string"
+    },
+    "service_type_ref": {
+      "@id": "hubrise:service_type_ref",
+      "@type": "xsd:string"
+    },
+    "expected_time": {
+      "@id": "hubrise:expected_time",
+      "@type": "xsd:string"
+    },
+    "expected_time_pickup": {
+      "@id": "hubrise:expected_time_pickup",
+      "@type": "xsd:boolean"
+    },
+    "asap": {
+      "@id": "hubrise:asap",
+      "@type": "xsd:boolean"
+    },
+    "confirmed_time": {
+      "@id": "hubrise:confirmed_time",
+      "@type": "xsd:string"
+    },
+    "driver_pickup_url": {
+      "@id": "hubrise:driver_pickup_url",
+      "@type": "xsd:string"
+    },
+    "customer_notes": {
+      "@id": "hubrise:customer_notes",
+      "@type": "xsd:string"
+    },
+    "seller_notes": {
+      "@id": "hubrise:seller_notes",
+      "@type": "xsd:string"
+    },
+    "collection_code": {
+      "@id": "hubrise:collection_code",
+      "@type": "xsd:string"
+    },
+    "coupon_codes": {
+      "@id": "hubrise:coupon_codes",
+      "@type": "xsd:string"
+    },
+    "items": {
+      "@id": "hubrise:items",
+      "@type": "xsd:string"
+    },
+    "payments": {
+      "@id": "hubrise:payments",
+      "@type": "xsd:string"
+    },
+    "customer_id": {
+      "@id": "hubrise:customer_id",
+      "@type": "xsd:string"
+    },
+    "customer_list_id": {
+      "@id": "hubrise:customer_list_id",
+      "@type": "xsd:string"
+    },
+    "customer_private_ref": {
+      "@id": "hubrise:customer_private_ref",
+      "@type": "xsd:string"
+    },
+    "customer": {
+      "@id": "hubrise:customer",
+      "@type": "xsd:string"
+    },
+    "loyalty_operations": {
+      "@id": "hubrise:loyalty_operations",
+      "@type": "xsd:string"
+    },
+    "PostLocationOrdersResponse": "hubrise:PostLocationOrdersResponse",
+    "location_id": {
+      "@id": "hubrise:location_id",
+      "@type": "xsd:string"
+    },
+    "total": {
+      "@id": "hubrise:total",
+      "@type": "xsd:string"
+    },
+    "GetLocationOrdersOrderidResponse": "hubrise:GetLocationOrdersOrderidResponse",
+    "PatchLocationOrdersOrderidRequest": "hubrise:PatchLocationOrdersOrderidRequest",
+    "PatchLocationOrdersOrderidResponse": "hubrise:PatchLocationOrdersOrderidResponse",
+    "GetLocationsLocationidCatalogsResponse": "hubrise:GetLocationsLocationidCatalogsResponse",
+    "PostLocationsLocationidCatalogsRequest": "hubrise:PostLocationsLocationidCatalogsRequest",
+    "data.variants": {
+      "@id": "hubrise:data.variants",
+      "@container": "@list"
+    },
+    "data.categories": {
+      "@id": "hubrise:data.categories",
+      "@container": "@list"
+    },
+    "data.products": {
+      "@id": "hubrise:data.products",
+      "@container": "@list"
+    },
+    "data.option_lists": {
+      "@id": "hubrise:data.option_lists",
+      "@container": "@list"
+    },
+    "data.deals": {
+      "@id": "hubrise:data.deals",
+      "@container": "@list"
+    },
+    "data.discounts": {
+      "@id": "hubrise:data.discounts",
+      "@container": "@list"
+    },
+    "data.charges": {
+      "@id": "hubrise:data.charges",
+      "@container": "@list"
+    },
+    "PostLocationsLocationidCatalogsResponse": "hubrise:PostLocationsLocationidCatalogsResponse",
+    "GetLocationsLocationidOrdersResponse": "hubrise:GetLocationsLocationidOrdersResponse",
+    "PostLocationsLocationidOrdersRequest": "hubrise:PostLocationsLocationidOrdersRequest",
+    "PostLocationsLocationidOrdersResponse": "hubrise:PostLocationsLocationidOrdersResponse",
+    "GetLocationsLocationidOrdersOrderidResponse": "hubrise:GetLocationsLocationidOrdersOrderidResponse",
+    "delivery": {
+      "@id": "hubrise:delivery",
+      "@type": "xsd:string"
+    },
+    "PatchLocationsLocationidOrdersOrderidRequest": "hubrise:PatchLocationsLocationidOrdersOrderidRequest",
+    "PatchLocationsLocationidOrdersOrderidResponse": "hubrise:PatchLocationsLocationidOrdersOrderidResponse"
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "HubRise API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects HubRise's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-20) from openapi/_ae-authored/hubrise-openapi-generated.yml.",
+  "dcterms:created": "2026-10-20",
+  "dcterms:source": [
+    "openapi/_ae-authored/hubrise-openapi-generated.yml"
+  ]
+}

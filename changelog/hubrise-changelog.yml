@@ -1,0 +1,11 @@
+generated: '2026-10-21'
+method: searched
+source: https://www.hubrise.com/developers/changelog
+name: HubRise changelog
+entries:
+  - version: "2026"
+    date: "2026-10-20"
+    highlights: "API Update order_items.quantity now supports up to 6 decimal places instead of 2."
+  - version: "2026"
+    date: "2026-09-30"
+    highlights: "Integration Update Lightspeed K-Series: SKU restrictions and menu modifier groups now supported in the catalog pull."

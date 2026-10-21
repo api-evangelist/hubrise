@@ -1,23 +1,121 @@
 aid: hubrise
+
 name: HubRise
-description: 'HubRise is a company surfaced via the API Evangelist harvest backlog (source: g2-catalog)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: HubRise provides an integration platform for retail and hospitality businesses, connecting point‑of‑sale (EPOS) systems, delivery
+  platforms, marketing tools, and inventory management into a single ecosystem. Their solution enables merchants to centralise orders, synchronise
+  product catalogs, manage inventory across multiple sales channels, and gain unified analytics. With over 2,500 customers across 20+ countries,
+  HubRise supports more than 110 integrations, offering APIs and developer documentation for seamless integration and white‑label partnerships.
+
 url: https://raw.githubusercontent.com/api-evangelist/hubrise/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:g2-catalog
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-20 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-20'
+
 modified: '2026-10-20'
+
 tags:
 - Company
-apis: []
+- Integration
+- Retail
+- Hospitality
+- API
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Plans
+  url: plans/hubrise-plans-pricing.yml
+- type: Spectral
+  url: rules/hubrise-rules.yml
+- type: JSONLD
+  url: json-ld/hubrise-context.jsonld
+- type: Vocabulary
+  url: vocabulary/hubrise-vocabulary.yml
+- type: Webhooks
+  url: asyncapi/hubrise-webhooks.yml
+- type: DataModel
+  url: data-model/hubrise-data-model.yml
+- type: ChangeLog
+  url: changelog/hubrise-changelog.yml
+- type: Authentication
+  url: authentication/hubrise-authentication.yml
+- type: Conformance
+  url: conformance/hubrise-conformance.yml
+- type: Hosts
+  url: hosts/hubrise-hosts.yml
+- type: ChangeLog
+  url: https://www.hubrise.com/developers/changelog
+- type: DomainSecurity
+  url: security/hubrise-domain-security.yml
 - type: Website
   url: https://hubrise.com/
+- type: DeveloperPortal
+  url: https://www.hubrise.com/developers
+- type: Documentation
+  url: https://www.hubrise.com/docs
+- type: APIReference
+  url: https://www.hubrise.com/developers/api/general-concepts
+- type: GettingStarted
+  url: https://www.hubrise.com/developers/quick-start
+- type: Support
+  url: https://www.hubrise.com/contact-us
+- type: Blog
+  url: https://www.hubrise.com/blog
+- type: Pricing
+  url: https://www.hubrise.com/pricing
+- type: SignUp
+  url: https://manager.hubrise.com/signup?locale=en-GB
+- type: TermsOfService
+  url: https://www.hubrise.com/legal/general-terms-and-conditions
+- type: PrivacyPolicy
+  url: https://www.hubrise.com/legal/legal-notices
+
+apis:
+- name: HubRise API
+  description: HubRise API provides REST endpoints for orders, deliveries, catalogs, inventories, customers, and callbacks. Base URL is https://api.hubrise.com/v1
+    as documented.
+  humanURL: https://www.hubrise.com/developers/api/general-concepts
+  baseURL: https://api.hubrise.com/v1
+  aid: hubrise:hubrise-api-2
+- aid: hubrise:hubrise-api
+  name: HubRise API
+  description: 'HubRise API as documented publicly: 44 operations. Contract generated from the documentation by API Evangelist (2026-10-20); not
+
+    the provider''s own document.'
+  humanURL: https://www.hubrise.com/developers/api
+  baseURL: https://api.hubrise.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/hubrise-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/hubrise-post-location-orders-request-schema.json
+  - type: JSONSchema
+    url: json-schema/hubrise-post-locations-locationid-orders-request-schema.json
+  - type: JSONSchema
+    url: json-schema/hubrise-get-catalogs-catalogid-products-productid-skus-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/hubrise-get-catalogs-catalogid-option-lists-optionlistid-options-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/hubrise-get-catalogs-catalogid-products-id-response-schema.json
+  - type: JSONSchema
+    url: json-schema/hubrise-post-locations-locationid-catalogs-request-schema.json
+x-enrichment:
+  date: '2026-10-20'
+  status: enriched
+  artifacts_added: 24
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

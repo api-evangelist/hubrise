@@ -1,0 +1,16 @@
+generated: '2026-10-20'
+method: none
+source:
+- https://zapier.com/apps/hubrise/integrations
+- https://n8n.io/integrations/hubrise/
+- https://composio.dev/toolkits/hubrise
+- https://monid.ai/tools/hubrise
+checked:
+- https://composio.dev/toolkits/hubrise
+- https://monid.ai/tools/hubrise
+- https://n8n.io/integrations/hubrise/
+- https://zapier.com/apps/hubrise/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []

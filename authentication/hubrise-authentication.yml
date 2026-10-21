@@ -1,0 +1,20 @@
+generated: '2026-10-20'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.hubrise.com/developers/api/authentication
+sources:
+- https://www.hubrise.com/developers/api/authentication
+- https://www.hubrise.com/developers
+- https://www.hubrise.com/developers/quick-start
+description: HubRise uses OAuth 2.0 for authentication.
+schemes:
+- type: oauth2
+  name: OAuth 2.0
+  evidence: The HubRise API relies on the OAuth 2.0 protocol for this purpose.
+  flows:
+  - authorization_code
+  authorize_url: https://manager.hubrise.com/oauth2/v1/authorize
+  how_to_obtain: Create an OAuth 2.0 client in the HubRise back‑office (Settings → Developer → Create an OAuth 2.0 client) and download the client
+    secret JSON containing the client_id and client_secret.
+note: Access tokens are obtained by POSTing to https://manager.hubrise.com/oauth2/v1/token with the client credentials and authorisation code.
+docs: https://www.hubrise.com/developers/api/authentication

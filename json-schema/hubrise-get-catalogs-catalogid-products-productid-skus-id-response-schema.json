@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/hubrise/main/json-schema/hubrise-get-catalogs-catalogid-products-productid-skus-id-response-schema.json",
+  "title": "GetCatalogsCatalogidProductsProductidSkusIdResponse",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/GetCatalogsCatalogidProductsProductidSkusIdResponse",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "The id of the sku."
+    },
+    "ref": {
+      "type": "string",
+      "description": "The ref of the sku."
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of the sku."
+    },
+    "product_id": {
+      "type": "string",
+      "description": "The id of the sku's parent product."
+    },
+    "restrictions": {
+      "type": "object",
+      "description": "Restrictions for the sku."
+    },
+    "price": {
+      "type": "string",
+      "description": "Price of the sku."
+    },
+    "price_overrides": {
+      "type": "array",
+      "description": "Price overrides."
+    },
+    "option_list_ids": {
+      "type": "array",
+      "description": "Ids of option lists attached to the sku."
+    },
+    "tags": {
+      "type": "array",
+      "description": "Tags of the sku."
+    },
+    "custom_fields": {
+      "type": "object",
+      "description": "Custom fields."
+    },
+    "weight": {
+      "type": "string",
+      "description": "Weight of the sku."
+    },
+    "volume": {
+      "type": "string",
+      "description": "Volume of the sku."
+    },
+    "nb_servings": {
+      "type": "integer",
+      "description": "Number of servings."
+    }
+  }
+}

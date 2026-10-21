@@ -1,0 +1,35 @@
+generated: '2026-10-20'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.hubrise.com/pricing
+sources:
+- https://www.hubrise.com/pricing
+name: HubRise pricing
+audience: business-product
+pricing_basis: per-seat
+plans:
+- name: Standard (1 to 5 locations)
+  price_text: €35
+  price: 35
+  description: Monthly fee per location for 1 to 5 locations.
+- name: Standard (6 to 30 locations)
+  price_text: €30
+  price: 30
+  description: Monthly fee per location for 6 to 30 locations.
+- name: Standard (31 and more locations)
+  price_text: €27
+  price: 27
+  description: Monthly fee per location for 31 and more locations.
+- name: Dark Kitchen (0 to 1,500 orders per month)
+  price_text: €35
+  price: 35
+  description: Standard fee for Dark Kitchen locations handling 0 to 1,500 orders per month.
+- name: Dark Kitchen (1,501 to 3,000 orders per month)
+  price_text: €55
+  price: 55
+  description: Fee for Dark Kitchen locations handling 1,501 to 3,000 orders per month.
+- name: Dark Kitchen (3,001 to 4,500 orders per month)
+  price_text: €75
+  price: 75
+  description: Fee for Dark Kitchen locations handling 3,001 to 4,500 orders per month.
+docs: https://www.hubrise.com/pricing

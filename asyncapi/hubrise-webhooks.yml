@@ -1,0 +1,51 @@
+generated: '2026-10-20'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.hubrise.com/developers/api/callbacks
+sources:
+- https://www.hubrise.com/developers/api/callbacks
+description: HubRise supports active and passive callbacks. Active callbacks receive a POST request with a JSON body and include an HMAC SHA‑256
+  signature in the `X-HubRise-Hmac-SHA256` header. The client must acknowledge with any 2xx‑4xx HTTP status within 20 seconds. If the response
+  is 5xx or times out, HubRise retries up to 6 times, starting after 1 minute and doubling the wait after each attempt, up to a maximum of 32 minutes.
+events:
+- event: catalog.create
+  description: A catalog the connection has access to is created.
+- event: catalog.delete
+  description: A catalog the connection has access to is deleted.
+- event: catalog.update
+  description: A catalog the connection has access to is updated.
+- event: customer.create
+  description: A customer the connection has access to is created.
+- event: customer.update
+  description: A customer the connection has access to is updated.
+- event: customer_list.create
+  description: A customer list the connection has access to is created.
+- event: customer_list.delete
+  description: A customer list the connection has access to is deleted.
+- event: customer_list.update
+  description: A customer list the connection has access to is updated.
+- event: delivery.create
+  description: A delivery is created for an order the connection has access to.
+- event: delivery.update
+  description: A delivery is updated for an order the connection has access to.
+- event: own_order_delivery.create
+  description: A delivery belonging to an order created by this connection is created.
+- event: own_order_delivery.update
+  description: A delivery belonging to an order created by this connection is updated.
+- event: inventory.patch
+  description: The inventory for a location the connection has access to is patched.
+- event: inventory.update
+  description: The inventory for a location the connection has access to is updated.
+- event: location.update
+  description: A location the connection has access to is updated.
+- event: order.create
+  description: An order the connection has access to is created.
+- event: order.update
+  description: An order the connection has access to is updated (also triggered by delivery or delivery‑quote changes, except driver position
+    changes).
+- event: own_order.update
+  description: An order created by this connection is updated.
+delivery:
+  signature: X-HubRise-Hmac-SHA256
+  retries: up to 6 attempts, first retry after 1 minute, doubling each time, max 32 minutes
+docs: https://www.hubrise.com/developers/api/callbacks

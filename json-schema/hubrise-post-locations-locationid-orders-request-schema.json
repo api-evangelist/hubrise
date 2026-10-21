@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/hubrise/main/json-schema/hubrise-post-locations-locationid-orders-request-schema.json",
+  "title": "PostLocationsLocationidOrdersRequest",
+  "x-generated": "2026-10-20",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/hubrise-openapi-generated.yml#/components/schemas/PostLocationsLocationidOrdersRequest",
+  "type": "object",
+  "properties": {
+    "channel": {
+      "type": "string"
+    },
+    "ref": {
+      "type": "string"
+    },
+    "private_ref": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "service_type": {
+      "type": "string"
+    },
+    "service_type_ref": {
+      "type": "string"
+    },
+    "expected_time": {
+      "type": "string"
+    },
+    "expected_time_pickup": {
+      "type": "boolean"
+    },
+    "asap": {
+      "type": "boolean"
+    },
+    "confirmed_time": {
+      "type": "string"
+    },
+    "driver_pickup_url": {
+      "type": "string"
+    },
+    "customer_notes": {
+      "type": "string"
+    },
+    "seller_notes": {
+      "type": "string"
+    },
+    "collection_code": {
+      "type": "string"
+    },
+    "coupon_codes": {
+      "type": "string"
+    },
+    "items": {
+      "type": "string"
+    },
+    "deals": {
+      "type": "string"
+    },
+    "discounts": {
+      "type": "string"
+    },
+    "charges": {
+      "type": "string"
+    },
+    "payments": {
+      "type": "string"
+    },
+    "customer_id": {
+      "type": "string"
+    },
+    "customer_list_id": {
+      "type": "string"
+    },
+    "customer_private_ref": {
+      "type": "string"
+    },
+    "customer": {
+      "type": "string"
+    },
+    "loyalty_operations": {
+      "type": "string"
+    },
+    "custom_fields": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "status"
+  ]
+}
